@@ -5,7 +5,7 @@ Home: https://github.com/UnfoldedInc/earthengine-layers/tree/master/py
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Pydeck wrapper for use with Google Earth Engine
 
