@@ -1,5 +1,5 @@
 {% set name = "pydeck-earthengine-layers" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 14816450cfc65d58453efbd36f75d16f3e4f7a2d3da787e8651c27de77c6d0b1
+  sha256: 86a36c395d85ffd04e23e633c327626526d0dd5c1f55246117c7148ce6cf399e
 
 build:
   number: 0
