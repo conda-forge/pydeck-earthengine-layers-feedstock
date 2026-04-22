@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 86a36c395d85ffd04e23e633c327626526d0dd5c1f55246117c7148ce6cf399e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools >=38.6.0
     - twine >=1.11.0
   run:
     - earthengine-api >=0.1.215
     - pydeck >=0.3.0
-    - python >=3.5
+    - python >={{ python_min }}
     - requests
     - httplib2shim
 
@@ -33,6 +33,7 @@ test:
     - pydeck_earthengine_layers
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
